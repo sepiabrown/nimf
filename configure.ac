@@ -98,19 +98,19 @@ dnl ***************************************************************************
 dnl nimf-anthy
 dnl ***************************************************************************
 
-AC_ARG_ENABLE([nimf-anthy],
-  AS_HELP_STRING([--disable-nimf-anthy], [Disable nimf-anthy]))
-
-AS_IF([test "x$enable_nimf_anthy" != "xno"],
-      [PKG_CHECK_MODULES(NIMF_ANTHY_DEPS, [anthy $LIBNIMF_REQUIRES])])
-AS_IF([test "x$enable_nimf_anthy" != "xno"],
-      [AC_CHECK_FILE([/var/lib/anthy/anthy.dic], [HAVE_ANTHY_DIC="yes"])])
-AS_IF([test "x$enable_nimf_anthy" != "xno"],
-      [AC_CHECK_FILE([/usr/share/anthy/anthy.dic], [HAVE_ANTHY_DIC="yes"])])
-AS_IF([test "x$enable_nimf_anthy" != "xno" -a "x$HAVE_ANTHY_DIC" != "xyes"],
-      [AC_MSG_ERROR([anthy.dic is not found.])])
-
-AM_CONDITIONAL([ENABLE_NIMF_ANTHY], [test "x$enable_nimf_anthy" != "xno"])
+#AC_ARG_ENABLE([nimf-anthy],
+#  AS_HELP_STRING([--disable-nimf-anthy], [Disable nimf-anthy]))
+#
+#AS_IF([test "x$enable_nimf_anthy" != "xno"],
+#      [PKG_CHECK_MODULES(NIMF_ANTHY_DEPS, [anthy $LIBNIMF_REQUIRES])])
+#AS_IF([test "x$enable_nimf_anthy" != "xno"],
+#      [AC_CHECK_FILE([/var/lib/anthy/anthy.dic], [HAVE_ANTHY_DIC="yes"])])
+#AS_IF([test "x$enable_nimf_anthy" != "xno"],
+#      [AC_CHECK_FILE([/usr/share/anthy/anthy.dic], [HAVE_ANTHY_DIC="yes"])])
+#AS_IF([test "x$enable_nimf_anthy" != "xno" -a "x$HAVE_ANTHY_DIC" != "xyes"],
+#      [AC_MSG_ERROR([anthy.dic is not found.])])
+#
+#AM_CONDITIONAL([ENABLE_NIMF_ANTHY], [test "x$enable_nimf_anthy" != "xno"])
 
 dnl ***************************************************************************
 dnl im-nimf-qt4  im-nimf-qt5
